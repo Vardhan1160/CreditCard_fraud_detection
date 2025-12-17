@@ -88,3 +88,4 @@ def test_preprocessor_with_pca():
     # Check no NaNs
     assert not np.isnan(X_transformed).any()
 
+"""
