@@ -24,10 +24,10 @@ wheels/
 venv/
 env/
 ENV/
-.venv
+.venv/
 
-# Jupyter Notebook
-.ipynb_checkpoints
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
 *.ipynb_checkpoints/
 
 # IDE
@@ -37,18 +37,18 @@ ENV/
 *.swo
 *~
 
-# Data files (large datasets)
-data/raw/*.csv
-!data/raw/.gitkeep
+# ─── Large data files (DO NOT commit — download via Kaggle API) ───────────────
+data/creditcard.csv
+data/*.csv
+data/*.zip
 
-# Model files (can be large)
-models/*.pkl
-models/*.joblib
-!models/.gitkeep
+# ─── Trained model files (DO NOT commit — regenerate via train.py) ───────────
+model/*.pkl
+model/*.joblib
 
-# Reports and figures
-reports/figures/*
-!reports/figures/.gitkeep
+# Keep folder stubs in git
+!data/.gitkeep
+!model/.gitkeep
 
 # Environment variables
 .env
@@ -65,7 +65,3 @@ Thumbs.db
 .coverage
 htmlcov/
 .pytest_cache/
-
-# Docker
-.dockerignore
-
